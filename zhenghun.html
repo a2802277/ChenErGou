@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>征婚</title>
+    <style>
+    body {
+            background: #aaa;
+        }
+    * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+    a {
+        text-decoration: none;
+    }  
+      
+    .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .all {
+        border-radius: 5px;
+        margin: 0 auto;
+        width: 490px;
+        height: 224px;
+        background: url(images/bg.png) repeat-x;
+        margin-top: 100px;
+    }
+    .nav {
+        width: 300px;
+        height: 45px;
+        background: #FEBE0F;
+        margin: 0 auto;
+        border-radius: 0 0 8px 8px;
+        padding-top: 7px;
+        padding-left: 15px; 
+    }
+    a {
+        float: left;
+        width: 54px;
+        height: 30px;
+        font: 12px "微软雅黑";
+        color: #000;
+        text-align: center;
+        line-height: 30px;
+    }
+    a:hover {
+        color: #aaa;
+    }
+    .content {
+        width: 300px;
+        height: 50px;
+        margin: 0 auto;
+        line-height: 50px;
+        padding-left: 23px;
+    }
+    span {
+        font: 12px "微软雅黑";
+    }
+    span:nth-child(2) {
+        border-radius: 3px;
+        background: #747373;
+        padding: 0 5px 0 5px;
+        box-shadow: 2px 2px 1px -1px #000 inset;
+    }
+    span:nth-child(2):hover {
+        box-shadow: 0px 0px 0px 0px #000; 
+    }
+    .footer {
+        width: 301px;
+        margin: 0 auto;
+    }
+    .footer input {
+        width: 300px;
+        height: 45px;
+        border-radius: 10px;
+        border: 1px sloid #000;
+        box-shadow: 1px 1px 1px 1px #000 inset;
+        color: #000;
+        padding-left: 20px;
+        background: url(images/bg1.png) no-repeat right center;
+        background-color:  rbg(155,155,155);
+        padding-right: 5px;
+    }
+    
+
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="nav">
+            <ul class="clearfix">
+                <li><a href="#" class="clearfix">首页向导</a></li>
+                <li><a href="#" class="clearfix">家庭概况</a></li>
+                <li><a href="#" class="clearfix">个人简介</a></li>
+                <li><a href="#" class="clearfix">招魂要求</a></li>
+                <li><a href="#" class="clearfix">联系方式</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <span>语言</span> <span>简/繁 &nbsp 英语</span> <span> 北京时间:2018/1/18&nbsp15:00</span>
+        </div>
+        <div class="footer">
+            <input type="text" placeholder="Search Our Content...">
+        </div>
+    </div>
+</body>
+</html>
