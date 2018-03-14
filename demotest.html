@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    li {
+      list-style: none;
+    }
+
+    .clearfix {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .mask {
+      background: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      display: none;
+    }
+
+    .nav {
+      width: 500px;
+      height: 300px;
+      margin-top: 200px;
+      background: rebeccapurple;
+      border-radius: 10px;
+      display: none;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+
+    .nav ul li {
+      float: left;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      width: 23%;
+      text-align: center;
+      color: #fff;
+    }
+
+    .navshow {
+      background: lawngreen;
+    }
+
+    .nav>div {
+      float: left;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      display: none;
+      padding-top: 50px;
+      font-size: 30px;
+      color: ivory;
+    }
+
+    #first {
+      display: block;
+    }
+
+    #nav>.conshow {
+      display: block;
+    }
+
+    .xixihaha {
+      display: block;
+    }
+
+    .hehehaha {
+      display: none;
+    }
+
+    span {
+      padding: 5px;
+      cursor: pointer;
+      font-size: 25px;
+      color: ivory;
+      position: absolute;
+      top: 85%;
+      left: 43%
+    }
+
+    span:hover {
+      border-radius: 5px;
+      background: #222;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="login">弹出面板</button>
+  <div class="mask"></div>
+  <div class="nav" id="nav">
+    <span>x 关闭</span>
+    <ul>
+      <li class="navshow">内容一</li>
+      <li>内容二</li>
+      <li>内容三</li>
+      <li>内容四</li>
+    </ul>
+    <div class="conshow">内容一</div>
+    <div>内容二</div>
+    <div>内容三</div>
+    <div>内容四</div>
+  </div>
+  <script>
+    document.querySelectorAll("ul li").forEach(function (node) {
+      node.onclick = function (e) {
+        document.querySelectorAll("ul li").forEach(function (obj) {
+          obj.classList.remove("navshow")
+          e.target.classList.add("navshow")
+
+        })
+        for (var i = 0; i < document.querySelectorAll("#nav div").length; i++) {
+
+          document.querySelectorAll("#nav div")[i].classList.remove("conshow")
+        }
+        document.querySelectorAll("ul li").forEach(function (o, b) {
+          if (o === e.target) {
+            document.querySelectorAll("#nav div")[b].classList.add("conshow")
+          }
+
+        })
+      }
+
+    })
+    document.querySelector(".login").onclick = function () {
+      document.querySelector(".mask").classList.add("xixihaha")
+      document.querySelector(".nav").classList.add("xixihaha")
+    }
+    document.querySelector("span").onclick = function () {
+      document.querySelector(".mask").classList.remove("xixihaha")
+      document.querySelector(".nav").classList.remove("xixihaha")
+    }
+  </script>
+</body>
+
+</html>
